@@ -1,5 +1,6 @@
 node_modules/
 dist/
+public/design-system/
 @mf-types/
 .mf/
 .env

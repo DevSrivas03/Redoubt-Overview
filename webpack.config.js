@@ -20,6 +20,9 @@ const DEFAULT_DEV_DS =
 
 function resolveDsRemoteUrl(env = {}) {
   const scenario = env.scenario ?? env.ds;
+  if (scenario === "pages") {
+    return `${GH_PAGES_BASE}design-system/mf-manifest.json`;
+  }
   if (scenario === "ds-local") return DEFAULT_LOCAL_DS;
   if (scenario === "ds-remote") return DEFAULT_DEV_DS;
   return process.env.DS_REMOTE_URL?.trim() || DEFAULT_LOCAL_DS;
@@ -27,6 +30,7 @@ function resolveDsRemoteUrl(env = {}) {
 
 module.exports = (_env, argv) => {
   const isDev = argv.mode === "development";
+  const scenario = _env?.scenario ?? _env?.ds;
   const dsRemoteUrl = resolveDsRemoteUrl(_env);
 
   return {
@@ -73,12 +77,13 @@ module.exports = (_env, argv) => {
           ds: `ds@${dsRemoteUrl}`,
         },
         shared: createSharedConfig(deps),
-        dts: isDev
-          ? false
-          : {
-              generateTypes: false,
-              consumeTypes: true,
-            },
+        dts:
+          isDev || scenario === "pages"
+            ? false
+            : {
+                generateTypes: false,
+                consumeTypes: true,
+              },
       }),
       new HtmlWebpackPlugin({
         template: "./public/index.html",

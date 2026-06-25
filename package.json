@@ -12,7 +12,7 @@
     "start:ds-local": "webpack serve --mode development --env scenario=ds-local",
     "start:ds-remote": "webpack serve --mode development --env scenario=ds-remote",
     "build": "webpack --mode production",
-    "build:pages": "webpack --mode production --env scenario=ds-remote",
+    "build:pages": "node scripts/sync-design-system-for-pages.cjs && webpack --mode production --env scenario=pages && node scripts/sync-design-system-for-pages.cjs --copy-to-dist",
     "typecheck": "tsc --noEmit",
     "predeploy": "npm run build:pages",
     "deploy": "gh-pages -d dist"
