@@ -64,6 +64,12 @@ function copyToDist() {
 
   fs.mkdirSync(path.dirname(DIST_DIR), { recursive: true });
   fs.cpSync(OUT_DIR, DIST_DIR, { recursive: true });
+
+  const indexPath = path.join(__dirname, "..", "dist", "index.html");
+  if (fs.existsSync(indexPath)) {
+    fs.copyFileSync(indexPath, path.join(__dirname, "..", "dist", "404.html"));
+  }
+
   console.log(`Copied Design System to ${DIST_DIR}`);
 }
 

@@ -6,7 +6,12 @@ Overview dashboard redesign workspace — React 19 + TypeScript (`.tsx`) consumi
 
 https://devsrivas03.github.io/Redoubt-Overview/
 
-In repo **Settings → Pages**, set **Build and deployment → Source** to **Deploy from a branch**, branch **`main`**, folder **`/docs`**. Pushes to `main` rebuild the site automatically (the `docs/` folder is updated by GitHub Actions).
+Use the hash route if the page looks blank after load:  
+https://devsrivas03.github.io/Redoubt-Overview/#/overview
+
+**GitHub Pages setting (required once):** Repo **Settings → Pages → Build and deployment → Source** → **Deploy from a branch** → branch **`main`**, folder **`/docs`**.
+
+If you still see an old error mentioning `cdn.dev.exigernext.com`, hard-refresh or open the link in a private window — that is a cached old bundle.
 
 ## Prerequisites
 

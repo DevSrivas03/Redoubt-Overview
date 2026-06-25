@@ -31,6 +31,7 @@ function resolveDsRemoteUrl(env = {}) {
 module.exports = (_env, argv) => {
   const isDev = argv.mode === "development";
   const scenario = _env?.scenario ?? _env?.ds;
+  const isPagesBuild = scenario === "pages";
   const dsRemoteUrl = resolveDsRemoteUrl(_env);
 
   return {
@@ -68,7 +69,8 @@ module.exports = (_env, argv) => {
         "process.env": JSON.stringify({
           NODE_ENV: isDev ? "development" : "production",
           DRAGGABLE_DEBUG: "",
-          BASE_PATH: isDev ? "" : GH_PAGES_BASENAME,
+          BASE_PATH: isDev || isPagesBuild ? "" : GH_PAGES_BASENAME,
+          USE_HASH_ROUTER: isPagesBuild ? "true" : "",
         }),
       }),
       new ModuleFederationPlugin({
@@ -87,6 +89,9 @@ module.exports = (_env, argv) => {
       }),
       new HtmlWebpackPlugin({
         template: "./public/index.html",
+        templateParameters: {
+          NODE_ENV: isDev ? "development" : "production",
+        },
       }),
     ],
     devServer: {
