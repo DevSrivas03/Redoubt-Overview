@@ -2,6 +2,12 @@
 
 Overview dashboard redesign workspace — React 19 + TypeScript (`.tsx`) consuming the Redoubt Design System via Module Federation.
 
+## Live demo
+
+https://devsrivas03.github.io/Redoubt-Overview/
+
+GitHub Pages must use **GitHub Actions** as the build source (Repo **Settings → Pages → Build and deployment → Source: GitHub Actions**). Pushes to `main` run the deploy workflow automatically.
+
 ## Prerequisites
 
 - Node.js 20+
