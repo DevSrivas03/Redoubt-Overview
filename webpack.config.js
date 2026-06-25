@@ -6,13 +6,7 @@ const {
 } = require("@module-federation/enhanced/webpack");
 const { createSharedConfig } = require("./webpack.shared.cjs");
 
-const pkg = require("./package.json");
-const deps = pkg.dependencies;
-
-const GH_PAGES_BASE = pkg.homepage
-  ? new URL(pkg.homepage).pathname.replace(/\/?$/, "/")
-  : "/";
-const GH_PAGES_BASENAME = GH_PAGES_BASE.replace(/\/$/, "");
+const deps = require("./package.json").dependencies;
 
 const DEFAULT_LOCAL_DS = "http://localhost:3010/mf-manifest.json";
 const DEFAULT_DEV_DS =
@@ -20,9 +14,6 @@ const DEFAULT_DEV_DS =
 
 function resolveDsRemoteUrl(env = {}) {
   const scenario = env.scenario ?? env.ds;
-  if (scenario === "pages") {
-    return `${GH_PAGES_BASE}design-system/mf-manifest.json`;
-  }
   if (scenario === "ds-local") return DEFAULT_LOCAL_DS;
   if (scenario === "ds-remote") return DEFAULT_DEV_DS;
   return process.env.DS_REMOTE_URL?.trim() || DEFAULT_LOCAL_DS;
@@ -30,8 +21,6 @@ function resolveDsRemoteUrl(env = {}) {
 
 module.exports = (_env, argv) => {
   const isDev = argv.mode === "development";
-  const scenario = _env?.scenario ?? _env?.ds;
-  const isPagesBuild = scenario === "pages";
   const dsRemoteUrl = resolveDsRemoteUrl(_env);
 
   return {
@@ -39,7 +28,7 @@ module.exports = (_env, argv) => {
     output: {
       path: path.resolve(__dirname, "dist"),
       filename: "[name].[contenthash].js",
-      publicPath: isDev ? "/" : GH_PAGES_BASE,
+      publicPath: "/",
       clean: true,
     },
     resolve: {
@@ -69,8 +58,6 @@ module.exports = (_env, argv) => {
         "process.env": JSON.stringify({
           NODE_ENV: isDev ? "development" : "production",
           DRAGGABLE_DEBUG: "",
-          BASE_PATH: isDev || isPagesBuild ? "" : GH_PAGES_BASENAME,
-          USE_HASH_ROUTER: isPagesBuild ? "true" : "",
         }),
       }),
       new ModuleFederationPlugin({
@@ -79,19 +66,15 @@ module.exports = (_env, argv) => {
           ds: `ds@${dsRemoteUrl}`,
         },
         shared: createSharedConfig(deps),
-        dts:
-          isDev || scenario === "pages"
-            ? false
-            : {
-                generateTypes: false,
-                consumeTypes: true,
-              },
+        dts: isDev
+          ? false
+          : {
+              generateTypes: false,
+              consumeTypes: true,
+            },
       }),
       new HtmlWebpackPlugin({
         template: "./public/index.html",
-        templateParameters: {
-          NODE_ENV: isDev ? "development" : "production",
-        },
       }),
     ],
     devServer: {

@@ -2,7 +2,6 @@
   "name": "redoubt-overview",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://devsrivas03.github.io/Redoubt-Overview/",
   "description": "Redoubt overview dashboard redesign — React + TSX consuming the Design System via Module Federation",
   "engines": {
     "node": ">=20"
@@ -12,10 +11,7 @@
     "start:ds-local": "webpack serve --mode development --env scenario=ds-local",
     "start:ds-remote": "webpack serve --mode development --env scenario=ds-remote",
     "build": "webpack --mode production",
-    "build:pages": "node scripts/sync-design-system-for-pages.cjs && webpack --mode production --env scenario=pages && node scripts/sync-design-system-for-pages.cjs --copy-to-dist",
-    "typecheck": "tsc --noEmit",
-    "predeploy": "npm run build:pages",
-    "deploy": "gh-pages -d dist"
+    "typecheck": "tsc --noEmit"
   },
   "dependencies": {
     "@emotion/cache": "11.14.0",
@@ -49,7 +45,6 @@
     "@types/react-dom": "19.2.3",
     "@types/react-grid-layout": "^1.3.6",
     "css-loader": "^7.1.2",
-    "gh-pages": "^6.3.0",
     "html-webpack-plugin": "^5.6.3",
     "style-loader": "^4.0.0",
     "ts-loader": "^9.5.1",

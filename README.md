@@ -2,17 +2,6 @@
 
 Overview dashboard redesign workspace — React 19 + TypeScript (`.tsx`) consuming the Redoubt Design System via Module Federation.
 
-## Live demo
-
-https://devsrivas03.github.io/Redoubt-Overview/
-
-Use the hash route if the page looks blank after load:  
-https://devsrivas03.github.io/Redoubt-Overview/#/overview
-
-**GitHub Pages setting (required once):** Repo **Settings → Pages → Build and deployment → Source** → **Deploy from a branch** → branch **`main`**, folder **`/docs`**.
-
-If you still see an old error mentioning `cdn.dev.exigernext.com`, hard-refresh or open the link in a private window — that is a cached old bundle.
-
 ## Prerequisites
 
 - Node.js 20+
