@@ -6,7 +6,13 @@ const {
 } = require("@module-federation/enhanced/webpack");
 const { createSharedConfig } = require("./webpack.shared.cjs");
 
-const deps = require("./package.json").dependencies;
+const pkg = require("./package.json");
+const deps = pkg.dependencies;
+
+const GH_PAGES_BASE = pkg.homepage
+  ? new URL(pkg.homepage).pathname.replace(/\/?$/, "/")
+  : "/";
+const GH_PAGES_BASENAME = GH_PAGES_BASE.replace(/\/$/, "");
 
 const DEFAULT_LOCAL_DS = "http://localhost:3010/mf-manifest.json";
 const DEFAULT_DEV_DS =
@@ -28,7 +34,7 @@ module.exports = (_env, argv) => {
     output: {
       path: path.resolve(__dirname, "dist"),
       filename: "[name].[contenthash].js",
-      publicPath: "/",
+      publicPath: isDev ? "/" : GH_PAGES_BASE,
       clean: true,
     },
     resolve: {
@@ -58,6 +64,7 @@ module.exports = (_env, argv) => {
         "process.env": JSON.stringify({
           NODE_ENV: isDev ? "development" : "production",
           DRAGGABLE_DEBUG: "",
+          BASE_PATH: isDev ? "" : GH_PAGES_BASENAME,
         }),
       }),
       new ModuleFederationPlugin({

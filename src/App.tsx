@@ -9,7 +9,7 @@ export default function App(): React.ReactElement {
   return (
     <AppThemeProvider>
       <CssBaseline />
-      <BrowserRouter>
+      <BrowserRouter basename={process.env.BASE_PATH}>
         <DashboardShell activeRoute="overview">
           <Routes>
             <Route path="/" element={<Navigate to="/overview" replace />} />
