@@ -1,0 +1,814 @@
+{
+  "id": "overview",
+  "name": "overview",
+  "metaData": {
+    "name": "overview",
+    "type": "app",
+    "buildInfo": {
+      "buildVersion": "0.1.0",
+      "buildName": "redoubt-overview"
+    },
+    "remoteEntry": {
+      "name": "",
+      "path": "",
+      "type": "global"
+    },
+    "types": {
+      "path": "",
+      "name": "",
+      "zip": "",
+      "api": ""
+    },
+    "globalName": "overview",
+    "pluginVersion": "2.6.0",
+    "publicPath": "/Redoubt-Overview/"
+  },
+  "shared": [
+    {
+      "singleton": true,
+      "requiredVersion": "11.14.0",
+      "shareScope": "default",
+      "version": "11.14.0",
+      "eager": true,
+      "name": "@emotion/cache",
+      "id": "overview:@emotion/cache",
+      "assets": {
+        "js": {
+          "async": [],
+          "sync": [
+            "main.69392d41c822681f4a0c.js"
+          ]
+        },
+        "css": {
+          "async": [],
+          "sync": []
+        }
+      },
+      "usedIn": [],
+      "usedExports": [],
+      "fallback": ""
+    },
+    {
+      "singleton": true,
+      "requiredVersion": "0.9.2",
+      "shareScope": "default",
+      "version": "0.9.2",
+      "eager": true,
+      "name": "@emotion/hash",
+      "id": "overview:@emotion/hash",
+      "assets": {
+        "js": {
+          "async": [],
+          "sync": [
+            "main.69392d41c822681f4a0c.js"
+          ]
+        },
+        "css": {
+          "async": [],
+          "sync": []
+        }
+      },
+      "usedIn": [],
+      "usedExports": [],
+      "fallback": ""
+    },
+    {
+      "singleton": true,
+      "requiredVersion": "0.9.0",
+      "shareScope": "default",
+      "version": "0.9.0",
+      "eager": true,
+      "name": "@emotion/memoize",
+      "id": "overview:@emotion/memoize",
+      "assets": {
+        "js": {
+          "async": [],
+          "sync": [
+            "main.69392d41c822681f4a0c.js"
+          ]
+        },
+        "css": {
+          "async": [],
+          "sync": []
+        }
+      },
+      "usedIn": [],
+      "usedExports": [],
+      "fallback": ""
+    },
+    {
+      "singleton": true,
+      "requiredVersion": "11.14.0",
+      "shareScope": "default",
+      "version": "11.14.0",
+      "eager": true,
+      "name": "@emotion/react",
+      "id": "overview:@emotion/react",
+      "assets": {
+        "js": {
+          "async": [],
+          "sync": [
+            "main.69392d41c822681f4a0c.js"
+          ]
+        },
+        "css": {
+          "async": [],
+          "sync": []
+        }
+      },
+      "usedIn": [],
+      "usedExports": [],
+      "fallback": ""
+    },
+    {
+      "singleton": true,
+      "requiredVersion": "1.3.3",
+      "shareScope": "default",
+      "version": "1.3.3",
+      "eager": true,
+      "name": "@emotion/serialize",
+      "id": "overview:@emotion/serialize",
+      "assets": {
+        "js": {
+          "async": [],
+          "sync": [
+            "main.69392d41c822681f4a0c.js"
+          ]
+        },
+        "css": {
+          "async": [],
+          "sync": []
+        }
+      },
+      "usedIn": [],
+      "usedExports": [],
+      "fallback": ""
+    },
+    {
+      "singleton": true,
+      "requiredVersion": "1.4.0",
+      "shareScope": "default",
+      "version": "1.4.0",
+      "eager": true,
+      "name": "@emotion/sheet",
+      "id": "overview:@emotion/sheet",
+      "assets": {
+        "js": {
+          "async": [],
+          "sync": [
+            "main.69392d41c822681f4a0c.js"
+          ]
+        },
+        "css": {
+          "async": [],
+          "sync": []
+        }
+      },
+      "usedIn": [],
+      "usedExports": [],
+      "fallback": ""
+    },
+    {
+      "singleton": true,
+      "requiredVersion": "11.14.1",
+      "shareScope": "default",
+      "version": "11.14.1",
+      "eager": true,
+      "name": "@emotion/styled",
+      "id": "overview:@emotion/styled",
+      "assets": {
+        "js": {
+          "async": [],
+          "sync": [
+            "main.69392d41c822681f4a0c.js"
+          ]
+        },
+        "css": {
+          "async": [],
+          "sync": []
+        }
+      },
+      "usedIn": [],
+      "usedExports": [],
+      "fallback": ""
+    },
+    {
+      "singleton": true,
+      "requiredVersion": "0.10.0",
+      "shareScope": "default",
+      "version": "0.10.0",
+      "eager": true,
+      "name": "@emotion/unitless",
+      "id": "overview:@emotion/unitless",
+      "assets": {
+        "js": {
+          "async": [],
+          "sync": [
+            "main.69392d41c822681f4a0c.js"
+          ]
+        },
+        "css": {
+          "async": [],
+          "sync": []
+        }
+      },
+      "usedIn": [],
+      "usedExports": [],
+      "fallback": ""
+    },
+    {
+      "singleton": true,
+      "requiredVersion": "1.4.2",
+      "shareScope": "default",
+      "version": "1.4.2",
+      "eager": true,
+      "name": "@emotion/utils",
+      "id": "overview:@emotion/utils",
+      "assets": {
+        "js": {
+          "async": [],
+          "sync": [
+            "main.69392d41c822681f4a0c.js"
+          ]
+        },
+        "css": {
+          "async": [],
+          "sync": []
+        }
+      },
+      "usedIn": [],
+      "usedExports": [],
+      "fallback": ""
+    },
+    {
+      "singleton": true,
+      "requiredVersion": "0.4.0",
+      "shareScope": "default",
+      "version": "0.4.0",
+      "eager": true,
+      "name": "@emotion/weak-memoize",
+      "id": "overview:@emotion/weak-memoize",
+      "assets": {
+        "js": {
+          "async": [],
+          "sync": [
+            "main.69392d41c822681f4a0c.js"
+          ]
+        },
+        "css": {
+          "async": [],
+          "sync": []
+        }
+      },
+      "usedIn": [],
+      "usedExports": [],
+      "fallback": ""
+    },
+    {
+      "singleton": true,
+      "requiredVersion": "7.3.9",
+      "shareScope": "default",
+      "version": "7.3.9",
+      "eager": true,
+      "name": "@mui/material",
+      "id": "overview:@mui/material",
+      "assets": {
+        "js": {
+          "async": [],
+          "sync": [
+            "main.69392d41c822681f4a0c.js"
+          ]
+        },
+        "css": {
+          "async": [],
+          "sync": []
+        }
+      },
+      "usedIn": [],
+      "usedExports": [],
+      "fallback": ""
+    },
+    {
+      "singleton": true,
+      "requiredVersion": "7.3.9",
+      "shareScope": "default",
+      "version": "7.3.9",
+      "eager": true,
+      "name": "@mui/private-theming",
+      "id": "overview:@mui/private-theming",
+      "assets": {
+        "js": {
+          "async": [],
+          "sync": [
+            "main.69392d41c822681f4a0c.js"
+          ]
+        },
+        "css": {
+          "async": [],
+          "sync": []
+        }
+      },
+      "usedIn": [],
+      "usedExports": [],
+      "fallback": ""
+    },
+    {
+      "singleton": true,
+      "requiredVersion": "7.3.9",
+      "shareScope": "default",
+      "version": "7.3.9",
+      "eager": true,
+      "name": "@mui/styled-engine",
+      "id": "overview:@mui/styled-engine",
+      "assets": {
+        "js": {
+          "async": [],
+          "sync": [
+            "main.69392d41c822681f4a0c.js"
+          ]
+        },
+        "css": {
+          "async": [],
+          "sync": []
+        }
+      },
+      "usedIn": [],
+      "usedExports": [],
+      "fallback": ""
+    },
+    {
+      "singleton": true,
+      "requiredVersion": "7.3.9",
+      "shareScope": "default",
+      "version": "7.3.9",
+      "eager": true,
+      "name": "@mui/system/DefaultPropsProvider",
+      "id": "overview:@mui/system/DefaultPropsProvider",
+      "assets": {
+        "js": {
+          "async": [],
+          "sync": [
+            "main.69392d41c822681f4a0c.js"
+          ]
+        },
+        "css": {
+          "async": [],
+          "sync": []
+        }
+      },
+      "usedIn": [],
+      "usedExports": [],
+      "fallback": ""
+    },
+    {
+      "singleton": true,
+      "requiredVersion": "7.3.9",
+      "shareScope": "default",
+      "version": "7.3.9",
+      "eager": true,
+      "name": "@mui/system/Grid",
+      "id": "overview:@mui/system/Grid",
+      "assets": {
+        "js": {
+          "async": [],
+          "sync": [
+            "main.69392d41c822681f4a0c.js"
+          ]
+        },
+        "css": {
+          "async": [],
+          "sync": []
+        }
+      },
+      "usedIn": [],
+      "usedExports": [],
+      "fallback": ""
+    },
+    {
+      "singleton": true,
+      "requiredVersion": "7.3.9",
+      "shareScope": "default",
+      "version": "7.3.9",
+      "eager": true,
+      "name": "@mui/system/InitColorSchemeScript",
+      "id": "overview:@mui/system/InitColorSchemeScript",
+      "assets": {
+        "js": {
+          "async": [],
+          "sync": [
+            "main.69392d41c822681f4a0c.js"
+          ]
+        },
+        "css": {
+          "async": [],
+          "sync": []
+        }
+      },
+      "usedIn": [],
+      "usedExports": [],
+      "fallback": ""
+    },
+    {
+      "singleton": true,
+      "requiredVersion": "7.3.9",
+      "shareScope": "default",
+      "version": "7.3.9",
+      "eager": true,
+      "name": "@mui/system/RtlProvider",
+      "id": "overview:@mui/system/RtlProvider",
+      "assets": {
+        "js": {
+          "async": [],
+          "sync": [
+            "main.69392d41c822681f4a0c.js"
+          ]
+        },
+        "css": {
+          "async": [],
+          "sync": []
+        }
+      },
+      "usedIn": [],
+      "usedExports": [],
+      "fallback": ""
+    },
+    {
+      "singleton": true,
+      "requiredVersion": "7.3.9",
+      "shareScope": "default",
+      "version": "7.3.9",
+      "eager": true,
+      "name": "@mui/system/colorManipulator",
+      "id": "overview:@mui/system/colorManipulator",
+      "assets": {
+        "js": {
+          "async": [],
+          "sync": [
+            "main.69392d41c822681f4a0c.js"
+          ]
+        },
+        "css": {
+          "async": [],
+          "sync": []
+        }
+      },
+      "usedIn": [],
+      "usedExports": [],
+      "fallback": ""
+    },
+    {
+      "singleton": true,
+      "requiredVersion": "7.3.9",
+      "shareScope": "default",
+      "version": "7.3.9",
+      "eager": true,
+      "name": "@mui/system/createBreakpoints",
+      "id": "overview:@mui/system/createBreakpoints",
+      "assets": {
+        "js": {
+          "async": [],
+          "sync": [
+            "main.69392d41c822681f4a0c.js"
+          ]
+        },
+        "css": {
+          "async": [],
+          "sync": []
+        }
+      },
+      "usedIn": [],
+      "usedExports": [],
+      "fallback": ""
+    },
+    {
+      "singleton": true,
+      "requiredVersion": "7.3.9",
+      "shareScope": "default",
+      "version": "7.3.9",
+      "eager": true,
+      "name": "@mui/system/createStyled",
+      "id": "overview:@mui/system/createStyled",
+      "assets": {
+        "js": {
+          "async": [],
+          "sync": [
+            "main.69392d41c822681f4a0c.js"
+          ]
+        },
+        "css": {
+          "async": [],
+          "sync": []
+        }
+      },
+      "usedIn": [],
+      "usedExports": [],
+      "fallback": ""
+    },
+    {
+      "singleton": true,
+      "requiredVersion": "7.3.9",
+      "shareScope": "default",
+      "version": "7.3.9",
+      "eager": true,
+      "name": "@mui/system/createTheme",
+      "id": "overview:@mui/system/createTheme",
+      "assets": {
+        "js": {
+          "async": [],
+          "sync": [
+            "main.69392d41c822681f4a0c.js"
+          ]
+        },
+        "css": {
+          "async": [],
+          "sync": []
+        }
+      },
+      "usedIn": [],
+      "usedExports": [],
+      "fallback": ""
+    },
+    {
+      "singleton": true,
+      "requiredVersion": "7.3.9",
+      "shareScope": "default",
+      "version": "7.3.9",
+      "eager": true,
+      "name": "@mui/system/cssVars",
+      "id": "overview:@mui/system/cssVars",
+      "assets": {
+        "js": {
+          "async": [],
+          "sync": [
+            "main.69392d41c822681f4a0c.js"
+          ]
+        },
+        "css": {
+          "async": [],
+          "sync": []
+        }
+      },
+      "usedIn": [],
+      "usedExports": [],
+      "fallback": ""
+    },
+    {
+      "singleton": true,
+      "requiredVersion": "7.3.9",
+      "shareScope": "default",
+      "version": "7.3.9",
+      "eager": true,
+      "name": "@mui/system/spacing",
+      "id": "overview:@mui/system/spacing",
+      "assets": {
+        "js": {
+          "async": [],
+          "sync": [
+            "main.69392d41c822681f4a0c.js"
+          ]
+        },
+        "css": {
+          "async": [],
+          "sync": []
+        }
+      },
+      "usedIn": [],
+      "usedExports": [],
+      "fallback": ""
+    },
+    {
+      "singleton": true,
+      "requiredVersion": "7.3.9",
+      "shareScope": "default",
+      "version": "7.3.9",
+      "eager": true,
+      "name": "@mui/system/style",
+      "id": "overview:@mui/system/style",
+      "assets": {
+        "js": {
+          "async": [],
+          "sync": [
+            "main.69392d41c822681f4a0c.js"
+          ]
+        },
+        "css": {
+          "async": [],
+          "sync": []
+        }
+      },
+      "usedIn": [],
+      "usedExports": [],
+      "fallback": ""
+    },
+    {
+      "singleton": true,
+      "requiredVersion": "7.3.9",
+      "shareScope": "default",
+      "version": "7.3.9",
+      "eager": true,
+      "name": "@mui/system/styleFunctionSx",
+      "id": "overview:@mui/system/styleFunctionSx",
+      "assets": {
+        "js": {
+          "async": [],
+          "sync": [
+            "main.69392d41c822681f4a0c.js"
+          ]
+        },
+        "css": {
+          "async": [],
+          "sync": []
+        }
+      },
+      "usedIn": [],
+      "usedExports": [],
+      "fallback": ""
+    },
+    {
+      "singleton": true,
+      "requiredVersion": "7.3.9",
+      "shareScope": "default",
+      "version": "7.3.9",
+      "eager": true,
+      "name": "@mui/system/useMediaQuery",
+      "id": "overview:@mui/system/useMediaQuery",
+      "assets": {
+        "js": {
+          "async": [],
+          "sync": [
+            "main.69392d41c822681f4a0c.js"
+          ]
+        },
+        "css": {
+          "async": [],
+          "sync": []
+        }
+      },
+      "usedIn": [],
+      "usedExports": [],
+      "fallback": ""
+    },
+    {
+      "singleton": true,
+      "requiredVersion": "7.3.9",
+      "shareScope": "default",
+      "version": "7.3.9",
+      "eager": true,
+      "name": "@mui/system/useThemeProps",
+      "id": "overview:@mui/system/useThemeProps",
+      "assets": {
+        "js": {
+          "async": [],
+          "sync": [
+            "main.69392d41c822681f4a0c.js"
+          ]
+        },
+        "css": {
+          "async": [],
+          "sync": []
+        }
+      },
+      "usedIn": [],
+      "usedExports": [],
+      "fallback": ""
+    },
+    {
+      "singleton": true,
+      "requiredVersion": "7.3.9",
+      "shareScope": "default",
+      "version": "7.3.9",
+      "eager": true,
+      "name": "@mui/system",
+      "id": "overview:@mui/system",
+      "assets": {
+        "js": {
+          "async": [],
+          "sync": [
+            "main.69392d41c822681f4a0c.js"
+          ]
+        },
+        "css": {
+          "async": [],
+          "sync": []
+        }
+      },
+      "usedIn": [],
+      "usedExports": [],
+      "fallback": ""
+    },
+    {
+      "singleton": true,
+      "requiredVersion": "19.2.4",
+      "shareScope": "default",
+      "version": "19.2.4",
+      "eager": true,
+      "allowNodeModulesSuffixMatch": true,
+      "name": "react-dom",
+      "id": "overview:react-dom",
+      "assets": {
+        "js": {
+          "async": [],
+          "sync": [
+            "main.69392d41c822681f4a0c.js"
+          ]
+        },
+        "css": {
+          "async": [],
+          "sync": []
+        }
+      },
+      "usedIn": [],
+      "usedExports": [],
+      "fallback": ""
+    },
+    {
+      "singleton": true,
+      "requiredVersion": "7.13.1",
+      "shareScope": "default",
+      "version": "7.13.1",
+      "allowNodeModulesSuffixMatch": true,
+      "name": "react-router-dom",
+      "eager": false,
+      "id": "overview:react-router-dom",
+      "assets": {
+        "js": {
+          "async": [],
+          "sync": [
+            "118.ec1fbb6218d5090ecca5.js"
+          ]
+        },
+        "css": {
+          "async": [],
+          "sync": []
+        }
+      },
+      "usedIn": [],
+      "usedExports": [],
+      "fallback": ""
+    },
+    {
+      "singleton": true,
+      "requiredVersion": "19.2.4",
+      "shareScope": "default",
+      "version": "19.2.4",
+      "eager": true,
+      "allowNodeModulesSuffixMatch": true,
+      "name": "react",
+      "id": "overview:react",
+      "assets": {
+        "js": {
+          "async": [],
+          "sync": [
+            "main.69392d41c822681f4a0c.js"
+          ]
+        },
+        "css": {
+          "async": [],
+          "sync": []
+        }
+      },
+      "usedIn": [],
+      "usedExports": [],
+      "fallback": ""
+    }
+  ],
+  "remotes": [
+    {
+      "alias": "ds",
+      "consumingFederationContainerName": "overview",
+      "federationContainerName": "ds",
+      "moduleName": "tokens",
+      "usedIn": [
+        "src/bootstrap.tsx"
+      ],
+      "entry": "/Redoubt-Overview/design-system/mf-manifest.json"
+    },
+    {
+      "alias": "ds",
+      "consumingFederationContainerName": "overview",
+      "federationContainerName": "ds",
+      "moduleName": "index",
+      "usedIn": [
+        "src/App.tsx",
+        "src/components/DashboardCanvas.tsx",
+        "src/components/DraggableWidgetGrid.tsx",
+        "src/components/PageWidthWrapper.tsx",
+        "src/components/a11y/LiveAnnouncer.tsx",
+        "src/components/charts/OverviewCharts.tsx",
+        "src/components/customize/CustomizeModal.tsx",
+        "src/components/empty-state/WidgetPicker.tsx",
+        "src/components/roles/CompactRoleBar.tsx",
+        "src/components/roles/RoleCard.tsx",
+        "src/components/roles/RoleCardHoverPreview.tsx",
+        "src/components/roles/RoleFirstPrompt.tsx",
+        "src/components/roles/RolesSection.tsx",
+        "src/components/widgets/DashboardWidgetCard.tsx",
+        "src/components/widgets/WidgetContent.tsx",
+        "src/layout/DashboardShell.tsx",
+        "src/pages/OverviewPage.tsx"
+      ],
+      "entry": "/Redoubt-Overview/design-system/mf-manifest.json"
+    }
+  ],
+  "exposes": []
+}
